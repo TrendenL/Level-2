@@ -1,4 +1,8 @@
-const peopleArraary = [
+/* Returns a list of everyone older than 18, which is
+sorted alphabetically by last name, and where
+each name and age is embedded in a string that looks like an HTML <li> element. */
+
+const peopleArray = [
     {
         firstName: "Sarah",
         lastName: "Palin",
@@ -36,7 +40,7 @@ const peopleArraary = [
     }
 ]
 
-const sortedArr = peopleArraary.filter(function(oldEnough){
+const sortedArr = peopleArray.filter(function(oldEnough){
     if(oldEnough.age > 18){
         return oldEnough
     }

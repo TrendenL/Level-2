@@ -1,0 +1,105 @@
+{
+   "menu": [
+       {
+           "appetizers": [
+               {
+                   "name": "Southwestern Eggrolls",
+                   "ingredients": ["crispy flour tortillas", "chicken", "black beans", "corn", "jalapeño jack cheese", "red peppers", "spinach"],
+                   "description": ""
+               },
+
+               {
+                   "name": "Chips & Salsa",
+                   "ingredients": ["tostada chips", "fresh salsa"],
+                   "description": ""
+               },
+
+               {
+                   "name": "Texas Cheese Fries",
+                   "ingredients": ["fries", "shredded cheese", "bacon", "jalapenos", "green onions"],
+                   "description": ""
+               }
+           ],
+
+           "cold sandwiches": [
+               {
+                   "name": "Cranberry Walnut Chicken Salad Sandwich",
+                   "ingredients": ["cranberries", "chicken", "walnuts", "bread"],
+                   "description": ""
+               },
+
+               {
+                   "name": "Cobb Salad Sub",
+                   "ingredients": ["deli ham", "eggs", "spinach", "tomatoes", "italian bread"],
+                   "description": ""
+               },
+
+               {
+                   "name": "PB & J",
+                   "ingredients": ["peanut butter", "jelly", "wheat bread"],
+                   "description": ""
+               }
+           ],
+
+           "hot sandwiches": [
+               {
+                   "name": "Southwestern Eggrolls",
+                   "ingredients": ["crispy flour tortillas", "chicken", "black beans", "corn", "jalapeño jack cheese", "red peppers", "spinach"],
+                   "description": ""
+               },
+
+               {
+                   "name": "Chips & Salsa",
+                   "ingredients": ["tostada chips", "fresh salsa"],
+                   "description": ""
+               },
+
+               {
+                   "name": "Texas Cheese Fries",
+                   "ingredients": ["fries", "shredded cheese", "bacon", "jalapenos", "green onions"],
+                   "description": ""
+               }
+           ],
+
+           "dessert": [
+               {
+                   "name": "Southwestern Eggrolls",
+                   "ingredients": ["crispy flour tortillas", "chicken", "black beans", "corn", "jalapeño jack cheese", "red peppers", "spinach"],
+                   "description": ""
+               },
+
+               {
+                   "name": "Chips & Salsa",
+                   "ingredients": ["tostada chips", "fresh salsa"],
+                   "description": ""
+               },
+
+               {
+                   "name": "Texas Cheese Fries",
+                   "ingredients": ["fries", "shredded cheese", "bacon", "jalapenos", "green onions"],
+                   "description": ""
+               }
+           ],
+
+           "drinks": [
+               {
+                   "name": "Southwestern Eggrolls",
+                   "ingredients": ["crispy flour tortillas", "chicken", "black beans", "corn", "jalapeño jack cheese", "red peppers", "spinach"],
+                   "description": ""
+               },
+
+               {
+                   "name": "Chips & Salsa",
+                   "ingredients": ["tostada chips", "fresh salsa"],
+                   "description": ""
+               },
+
+               {
+                   "name": "Texas Cheese Fries",
+                   "ingredients": ["fries", "shredded cheese", "bacon", "jalapenos", "green onions"],
+                   "description": ""
+               }
+           ]
+       }
+   ] 
+}
