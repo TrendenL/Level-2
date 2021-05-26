@@ -1,247 +1,477 @@
-/* UNIVERSAL */
-html {
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+* {
     margin: 0;
-    padding: 0;
-    font-weight: normal;
-  }
-  
-  ol, ul {
-    list-style: none;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-   
-.container {
-    /* give the container display grid */
-    /* with six rows, 50px high */
-    /* default all cells/children on the left be 2/3 the screen width, and all on the left 1/3 */
-    display: grid;
-    grid-template-rows: repeat(6, auto);
-    grid-template-columns: 2fr 1fr;
 }
 
-.footer {
-    /* make these span the width of the page */
-    grid-column: 1/3;
-    background-color: aquamarine;
+@font-face {
+    font-family: "Julius Sans One";
+    src: url(fonts/Julius_Sans_One/JuliusSansOne-Regular.ttf)
 }
 
+@font-face {
+    font-family: "Libre Baskerville-regular";
+    src: url(fonts/Libre_Baskerville-Reular.ttf);
+}
+
+@font-face {
+    font-family: "Libre Baskerville-Italic";
+    src: url(fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf)
+}
+
+@font-face {
+    font-family: "verdemoderna";
+    src: url(fonts/verdemoderna.woff);
+}
+
+
+/*For regular computer screen*/
 body {
-    color: rgb(68, 68, 68);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
 }
 
-h1, h2 {
-    font-family: 'Julius Sans One', sans-serif;
+h1 {
+    font: 45px "Libre Baskerville-Regular", sans-serif;
+    font-weight: lighter;
+    color: white
 }
 
-.sections {
-    padding: 50px 10px 50px 90px;
+h2 {
+    font: 25px "Libre Baskerville-Italic";
+    font-weight: lighter;
+    color: #C0CAC3
 }
 
-.sections h2 {
-    margin-top: 40px;
+h3 {
+    color: #28484C;
+    font: 28.8px "Julius Sans One", sans-serif;
 }
 
-.sections p {
-    font-size: 20px;
-    line-height: 1.7em;
-    width: 90%;
-    margin-top: 10px;
+abbr {
+    text-decoration-skip-ink: none;
 }
 
-/* HEADER */
-#header {
-    background: url(/img/contours-opaque.png) fixed, url(/img/gridlines.png), url(/img/huntington.jpg) no-repeat center center;
-    background-size: auto, auto, cover;
+
+/*Items in header*/
+header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-image: url("images/contours@2x.png"), url("images/noise.png"), url("images/gridlines.png"), url("images/huntington.jpeg");
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+}
+
+#curlyImg {
+    height: 100px;
+}
+
+#title {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
     display: flex;
     flex-direction: row;
-    text-align: center;
-    border: none;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    border-top: 14px solid rgb(6, 85, 78);
-}
-
-#logo {
-    display: block;
-    text-align: center;
-    padding-right: 20px;
-    margin-left: 110px;
-    margin-top: 30px;
-    height: 130px;
-}
-
-#header-text {
-    margin-top: 50px;
-    margin-left: 20px;
-    color: #fff;
-    margin-bottom: 50px;
-}
-
-#header-text p {
-    font-family: 'Newsreader', serif;
-    font-size: 30px;
-    margin-right: 120px;
-    margin-top: 15px;
-    opacity: 0.5;
-}
-
-#header-text h1 {
-    font-size: 50px;
-    margin-bottom: 5px;
-}
-
-#navigation {
-    background: url(/img/contours-opaque.png) fixed, url(/img/gridlines.png), url(/img/huntington.jpg) no-repeat center;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
+    vertical-align: center;
     justify-content: center;
-    border: none;
-    border-top: 14px solid rgb(6, 85, 78);
-
+    padding: 50px 0px
 }
 
-#nav-text {
-    margin-top: 120px;
+#titles {
+    padding: 0px 20px;
 }
 
-#navigation ul li a {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(187, 184, 184, 0.15);
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 20px;
-    padding: 20px 30px;
-}
-
-/* SECTIONs */
-#section-one {
-    background-color: rgb(247, 247, 247);
-}
-
-#section-one a {
-    text-decoration: none;
-    font-family: 'Julius Sans One', sans-serif;
-    color: rgb(139, 177, 129);
-}
-
-#section-two {
-    background: url(/img/contours-opaque.png), url(/img/bamboo.png) no-repeat center fixed;
-    background-size: auto, cover;
-    background-color: rgba(138,188,159,0.5);
-}
-
-#section-two a, #section-three a {
-    color: #0d8ba1;
-    text-decoration: none;
-}
-
-#section-two a:hover, #section-three a:hover {
-    text-decoration: underline;
-}
-
-/* ASIDES */
-.asides h3, .asides ul li a {
-    font-family: 'Julius Sans One', sans-serif;
-    margin-bottom: 5px;
-    width: 60%;
-    text-decoration: none;
-    color: rgb(68, 68, 68);
-}
-
-.asides ul {
-    padding: 80px 20px 30px 60px;
-}
-
-.asides ul li {
-    margin-bottom: 40px;
-}
-
-#aside-two {
-    background: url(/img/contours-opaque.png), url(/img/bamboo.png) no-repeat;
-    background-size: auto, cover;
-    background-color: rgba(111, 168, 135, 0.5);
-}
-
-#aside-one, #aside-three {
-    background-color: #edf4f0;
-}
-
-.css-html {
-    border-bottom: dotted 1.5px rgb(68, 68, 68);
-}
-
-/* FOOTER */
-.footer p {
-    margin: 80px auto;
+#viewAll {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
     text-align: center;
-    font-size: 35px;
-    width: 65%;
-    line-height: 1.7em;
-    font-family: 'Newsreader', serif;
-    color: #fff;
-    opacity: 0.5;
+    padding: 70px 0px 0px 0px;
+    font: 19.2px "Julius Sans One";
+    transition: .25s color;
 }
 
-.footer p a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+#viewAll a {
     text-decoration: none;
-    color:#fff;
+    padding: 20px 30px;
+    color: #ffffffA6;
+    background-color: #ffffff1A;
 }
-.footer p a:hover {
+
+#viewAll a:hover {
+    background-color: #ffffffA2;
+}
+
+#viewAll button {
+    text-decoration: none;
+    padding: 20px 30px;
+    color: #ffffffA6;
+    background-color: #ffffff1A;
+}
+
+#viewAll button:hover {
+    background-color: #ffffffA2;
+}
+
+
+/*Items in the body*/
+main {    
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    color: #325050;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+
+main p {
+    color: #325050;
+    font: 16px "Libre Baskerville-regular";
+    padding: 16px 72px 0px 144px;
+    line-height: 35px;
+}
+
+main h3 {
+    padding: 16px 72px 0px 144px;
+}
+
+main div {
+    padding: 34px 0px 64px 0px;
+}
+
+main a {
+    text-decoration: none;
+    transition: color .25s;
+}
+
+main a:hover {
     text-decoration: underline;
 }
 
-#footer-one {
-    background: url(/img/contours-opaque.png) fixed, url(/img/gridlines.png), url(/img/koi.jpg) no-repeat center center;
+a {
+    text-decoration-skip-ink: none;
 }
 
-#footer-two {
-    padding: 40px 0;
-    background-color: rgb(6, 85, 78);
+#definition {
+    text-decoration: underline dotted;
 }
 
-@media (max-width: 900px){
-    /* use this media query to help these two cells drop to the bottom when screens are smaller */
-    .aside-one {
-        grid-row: 9;
+#mainLink {
+    color: #0D8BA1;
+}
+
+#downloadArrow {
+    color: #809b7e;
+    font-family: "verdemoderna";
+}
+
+#download {
+    color: #809b7e;
+    font-family: "Julius Sans One";
+}
+
+#download:hover {
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    background-color: #0d8ba1;
+}
+
+#download:hover #downloadArrow {
+    text-decoration: none;
+    color: white;
+    background-color: #0d8ba1;
+}
+
+#upperLeft {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+#upperRight {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    background-color: #e5ede8;
+    padding: 45px 0px 0px 75px;
+}
+
+#upperRight h4 {
+    color: #607476;
+    font: 19.2px "Julius Sans One"
+}
+
+#upperRight a {
+    color: #616857;
+    font: 14.4px "Libre Baskerville-Regular" 
+}
+
+#upperRight a:hover {
+    text-decoration: none;
+    color: #0d8ba1
+}
+
+#upperRight div {
+    padding: 25px 0px 25px 0px;
+    width: 15em;
+    color: #C0CAC3;
+    font: 16.6px "Libre Baskerville-Italic"
+}
+
+#otherPages {
+    border-bottom: 1px solid #607476;
+}
+
+#middle {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    background-color: rgba(138, 188, 159, .5);
+    background-image: url("images/contours-opaque.png"), url("images/gridlines-opaque.png"), url("images/bamboo.png");
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+}
+
+#middleLeft {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+#middleLeft a {
+    color: #0D8BA1;
+}
+
+#middleRight {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    padding: 100px 0px 0px 75px;
+    background-color: rgba(138, 188, 159, .2); 
+}
+
+#middleRight a {
+    color: #607476;
+    font: 17.28px "Julius Sans One"
+}
+
+#middleRight a:hover {
+    text-decoration: none;
+    color: #0d8ba1;
+}
+
+#middleRight div {
+    padding: 25px 0px 25px 0px;
+    border-top: 1px solid #607476;
+    width: 15em;
+}
+
+#translations {
+    border-bottom: 1px solid #607476;
+}
+
+#lowerLeft {
+    grid-column: 1 / 3;
+    grid-row: 3 / 3;
+}
+
+#lowerRight {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    background-color: #e5ede8;
+}
+
+
+/*Items in footer*/
+footer {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    background-color: #134347;
+    text-align: center;
+    color: rgba(255, 255, 255, .4);
+    font: 32px "Libre Baskerville-Italic";
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+#footerLink {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
+    font: 32px "Libre Baskerville-Regular";
+}
+
+#footerLink:hover {
+    text-decoration: underline;
+}
+
+#footerLink:visited {
+    color: rgba(255, 255, 255, .7);
+    font: 32px "Libre Baskerville-Regular";
+}
+
+#credit {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-image: url("images/contours-opaque.png"), url("images/gridlines.png"), url("images/noise.png"), url("images/koi.jpg");
+    padding: 4em 10%;
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "verdemoderna";
+    transition: color .25s;
+    font-size: 65px;
+    padding: 0px 45px 0px 45px
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer a:visited {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3)
+}
+
+#validateHTML::before {
+    content: "5";
+}
+
+#validateHTML:hover::before {
+    content: "%";
+}
+
+#validateCSS::before {
+    content: "3";
+}
+
+#validateCSS:hover::before {
+    content: "#";
+}
+
+#creativeLicense::before {
+    content: "c";
+}
+
+#creativeLicense:hover::before {
+    content: "C";
+}
+
+#accessibility::before {
+    content: "a";
+}
+
+#accessibility:hover::before {
+    content: "A";
+}
+
+#github::before {
+    content: "g";
+}
+
+#github:hover::before {
+    content: "g";
+}
+
+#mediaLinks {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    padding: 2em 10%
+}
+
+
+/*Make responsive for screen size*/
+@media (max-width: 1000px) {
+    /*For regular computer screen*/
+    body {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(5, auto);
     }
-    .aside-two {
-        grid-row: 10;
+    
+    
+    /*Items in header*/
+    header {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        background-image: url("images/contours@2x.png"), url("images/noise.png"), url("images/gridlines.png"), url("images/huntington.jpeg");
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto);
     }
-    /* container could use some help so that it's children are full screen width */
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(10, auto);
+    
+    #title {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
     }
-}
+    
+    #viewAll {
+        grid-column: 1 / -2;
+        grid-row: 2 / 3;
 
-/* FLEX */
-/* use flexbox to make the icons behave like css zen garden's social icons */
-.icons {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-}
+    }
 
-.icons > div {
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    border-radius: 50%;
+    
+    /*Items in the body*/
+    main {    
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    main div {
+        padding: 10px 0px 64px 0px;
+    }
+    
+    #upperLeft {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    
+    #upperRight {
+        grid-column: 1 / -1;
+        grid-row: 9 / 10;
+    }
+    
+    #middle {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+    
+    #middleLeft {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    
+    #middleRight {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+    
+    #lowerLeft {
+        grid-column: 1 / -1;
+        grid-row: 3 / 3;
+    }
+  
+    /*Items in footer*/
+    footer {
+        grid-column: 1 / -1;
+        grid-row: 6 / 7;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+    
+    #credit {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    
+    #mediaLinks {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        padding: 2em 10%
+    }
 }
